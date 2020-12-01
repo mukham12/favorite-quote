@@ -17,8 +17,7 @@ class Quotes(db.Model):
 
 @app.route('/')
 def index():
-	result = Quotes.query.all()
-	return render_template('index.html', result=result)
+	return render_template('index.html', result=Quotes.query.all())
 
 
 @app.route('/quotes')
